@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 import { Hero, Roadmap, Anticipate,  Impact, Tokenomics } from "@/components/";
 
 const Home = () => {
