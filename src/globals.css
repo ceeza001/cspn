@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply max-h-screen bg-dark-1 text-[#BBC1CD] font-semibold font-inter;
+    @apply max-h-screen w-screen overflow-x-hidden bg-dark-1 text-[#BBC1CD] font-semibold font-inter;
   }
 }
 
@@ -125,7 +125,7 @@
 
   /* Topbar */
   .topbar {
-    @apply fixed top-0 z-[100] w-full w-full flex p-[1rem] justify-between items-center;
+    @apply fixed top-0 z-[99] w-full w-full flex p-[1rem] justify-between items-center;
   }
 }
 @layer components {

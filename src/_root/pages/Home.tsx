@@ -1,4 +1,4 @@
-import { Hero, Roadmap, Anticipate,  Impact, Tokenomics } from "@/components/";
+import { Hero, Roadmap, Anticipate,  Impact, Features, Tokenomics } from "@/components/";
 
 const Home = () => {
 
@@ -18,6 +18,10 @@ const Home = () => {
 
       <div className="my-[4rem]">
         <Impact />
+      </div>
+
+      <div className="my-[4rem]">
+        <Features />
       </div>
 
       <div className="my-[4rem] text-white">
