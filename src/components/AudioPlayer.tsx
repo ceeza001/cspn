@@ -41,14 +41,6 @@ const AudioPlayer = () => {
     };
   }, [isPlayingMusic]);
 
-  const handleClick = () => {
-    if (!isPlayingMusic) {
-      setIsPlayingMusic(true);
-    } else {
-    setIsPlayingMusic(false);
-    }
-  };
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
