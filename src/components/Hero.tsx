@@ -26,12 +26,12 @@ const Hero = () => {
           <div className="z-[900] flex items-center gap-2">
             <Button
               borderRadius="15px"
-              className="bg-transparent text-white border-primary-500/50 p-4 font-bold"
+              className="pointer-event-none bg-transparent text-white border-primary-500/50 p-4 font-bold"
             >
               <Link to="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NjgyMjU3MjA3MCwidG9rZW5fYWRkcmVzcyI6IkVRQjc0eGluYVJ0NHB5YmszaTJtSWdOV2x6R3BzQlNYZVFIeGpoNmt3VFh5RVZLbyJ9" 
                 className=""
               >
-              Buy $BUTTON
+              Coming Soon
               </Link>
             </Button>
             
