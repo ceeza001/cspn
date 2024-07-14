@@ -8,7 +8,7 @@ export const tokenomics = [
     content: "$10,000,000,000",
   },
   {
-    title: "Liquidity Burned",
+    title: "Liquidity Locked",
     content: "100%",
   },
   {
