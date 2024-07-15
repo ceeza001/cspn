@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
 
-import { Button } from "@/components/ui/moving-border";
 import { Vortex } from "@/components/ui/vortex";
 
 const Hero = () => {

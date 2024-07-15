@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/moving-border";
-
 const Anticipate = () => {
   return (
     <div className="p-[1rem] md:p-[4rem] w-full">
