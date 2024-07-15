@@ -1,15 +1,16 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const Tokenomics = () => {
   return (
-    <div className="w-full p-[1rem] md:px-[4rem] pointer-events-none">
+    <div className="w-full p-[1rem] md:px-[4rem]">
       <div className="w-full text-center">
         <h1 
           className="font-bold text-[30px] md:text-[50px]">
           MEET THE FOUNDERS
         </h1>
         <h2 
-          className="font-bold text-[15px] md:text-[25px] gradient-text2">
+          className="font-bold text-[20px] md:text-[25px] gradient-text2">
           Giga chads
         </h2>
         
@@ -23,6 +24,10 @@ const Tokenomics = () => {
             <div className="mt-8">
               <h2 className="text-[20px] font-bold gradient-text">{item.title}</h2>
               <p className="text-[12px] font-semibold">{item.content}</p>
+
+              <Link to={item.link} className="cursor-pointer mt-8 bg-primary w-full h-[3rem] rounded-lg flex flex-col items-center justify-center">
+                View Profile
+              </Link>
             </div>
           </div>
         ))}
@@ -278,36 +283,43 @@ const items = [
     header: <SkeletonOne />,
     title: "Venom",
     content: "Web3 Content writer and storyteller || DeFi analyst || Orange",
+    link: "https://x.com/mc__venom?t=LUNIljl11FAlQ10_dfN_Fw&s=09"
   },
   {
     header: <SkeletonTwo />,
     title: "Reiko",
     content: "Web3 Marketer || Co-Founder @heychads & @tadaverse ||$TON MAXI || NFT Collector || DM for Collab Amb @LogX_trade @LolliOnTon @TONGlitch @Ton_Baks",
+    link: "https://x.com/ReikoMigi?t=LUNIljl11FAlQ10_dfN_Fw&s=09"
   },
   {
     header: <SkeletonThree />,
     title: "Icebam",
     content: "NFTS DEFI WEB 3",
+    link: "https://x.com/IsaacOlatunji15?t=LUNIljl11FAlQ10_dfN_Fw&s=09"
   },
   {
     header: <SkeletonFour />,
     title: "Archie Billion$",
     content: "Building with @movementlabsxyz and @SuperteamNG ||Buildoor Medic Imago Dei",
+    link: "https://x.com/Archie_Bankz?t=LUNIljl11FAlQ10_dfN_Fw&s=09"
   },
   {
     header: <SkeletonFive />,
     title: "Eniola♠️",
     content: "DeFi Content Specialist | Transforming ideas into actionable content that drives organic growth and engagement Break down & Build up",
+    link: "https://x.com/_drNeyo?t=LUNIljl11FAlQ10_dfN_Fw&s=09"
   },
   {
     header: <SkeletonSix />,
     title: "DeFi Bob",
     content: "Web 3 | DeFi | Writer.",
+    link: "https://x.com/nftbob_?t=H2sQGwazY97_e_0aD6cMyg&s=09"
   },
   {
     header: <SkeletonSeven />,
     title: "Ceeza",
     content: "Web3 dev crafting cool stuff on the blockchain Poet coding ninja | Making digital magic happen! #Web3Dev #poet",
+    link: "https://x.com/Ceeza__007?t=H2sQGwazY97_e_0aD6cMyg&s=09"
   },
 ];
 

@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       <div className="mt-[4rem] flex flex-col md:flex-row items-center gap-2">
-        <Link to="https://t.me/+sqFgLAS6cX9lMDBk" className="rounded-full p-2 px-8 text-white bg-primary flex gap-2 items-center">
+        <Link to="https://t.me/+sqFgLAS6cX9lMDBk" className="cursor-pointer rounded-full p-2 px-8 text-white bg-primary flex gap-2 items-center">
           <img 
             src="/assets/icons/telegram.svg"
             alt="telegram"
