@@ -1,44 +1,78 @@
-export const tokenomics = [
-  {
-    title: "Token Name",
-    content: "$BUTTON",
-  },
-  {
-    title: "Total Tokens",
-    content: "$10,000,000,000",
-  },
-  {
-    title: "Liquidity Locked",
-    content: "100%",
-  },
-  {
-    title: "Tax",
-    content: "0%",
-  },
-];
 
 export const roadmaps = [
   {
-    id: 1,
-    title: "Phase 1",
-    steps: [
-      { id: 1, name: "Presale", description: "Launch $BUTTON on Gaspump", checked: true, },
-      { id: 2, name: "DEX Listing", description: "List $BUTTON on Dedust.io", checked: false, },
-      { id: 3, name: "Marketing Campaign", description: "Initiate a major marketing campaign", checked: false, },
-      { id: 4, name: "CMC & CoinGecko", description: "Get listed on CoinMarketCap and CoinGecko", checked: false, }
-    ],
+    "title": "Start Class",
+    "description": "Launch introductory sessions designed to welcome new members into the Trybe community. These classes will cover the basics of Web 3.0, blockchain technology, and the ethos of Trybe. The goal is to ensure that every new member understands the platform and feels integrated from the start.",
+    "objectives": [
+      "Provide foundational knowledge on Web 3.0.",
+      "Introduce members to the Trybe community’s values and goals.",
+      "Facilitate networking among new members."
+    ]
   },
   {
-    id: 2,
-    title: "Phase 2",
-    steps: [
-      { id: 1, name: "Product Development", description: "Enhance $BUTTON features", checked: false, },
-      { id: 2, name: "Exchange Listings", description: "List $BUTTON on additional exchanges", checked: false, },
-      { id: 3, name: "Community Engagement", description: "Expand community outreach and engagement", checked: false, },
-      { id: 4, name: "Partnerships", description: "Establish strategic partnerships", checked: false, }
-    ],
+    "title": "Community Data Collection",
+    "description": "Collect and analyze data from the community to better understand member demographics, interests, and needs. This data will help tailor services and initiatives to better serve the community.",
+    "objectives": [
+      "Gain insights into the community’s composition.",
+      "Identify common interests and needs.",
+      "Use data to improve and customize member experiences."
+    ]
   },
-];
+  {
+    "title": "Mentorship Program",
+    "description": "Establish a mentorship program that pairs experienced members with newcomers or those seeking guidance. Mentors will provide support, advice, and networking opportunities to help mentees achieve their goals.",
+    "objectives": [
+      "Foster personal and professional growth.",
+      "Strengthen community bonds through mentor-mentee relationships.",
+      "Enhance member engagement and retention."
+    ]
+  },
+  {
+    "title": "Weekly Twitter Space / Round Table with Trybe Founders",
+    "description": "Host weekly discussions on Twitter Spaces or similar platforms where Trybe founders and key community members discuss relevant topics, updates, and future plans. This ensures open communication and transparency within the community.",
+    "objectives": [
+      "Keep the community informed and engaged.",
+      "Provide a platform for feedback and suggestions.",
+      "Strengthen the connection between founders and members."
+    ]
+  },
+  {
+    "title": "Community Role Allocation",
+    "description": "Define and allocate specific roles within the community based on members’ skills, interests, and contributions. Roles may include moderators, content creators, event organizers, and more.",
+    "objectives": [
+      "Encourage active participation and contribution.",
+      "Leverage members’ strengths for community benefit.",
+      "Create a sense of responsibility and ownership within the community."
+    ]
+  },
+  {
+    "title": "Starting Up Web3 Job Agency",
+    "description": "Develop a job agency focused on Web3 opportunities, connecting community members with potential employers and projects within the Web3 space.",
+    "objectives": [
+      "Facilitate job placements and career development within the Web3 industry.",
+      "Provide resources and support for job seekers.",
+      "Strengthen the community’s professional network."
+    ]
+  },
+  {
+    "title": "Community Event",
+    "description": "Organize and host events that bring the community together, both online and offline. These events may include webinars, workshops, and social gatherings.",
+    "objectives": [
+      "Foster community engagement and interaction.",
+      "Provide educational and networking opportunities.",
+      "Strengthen the sense of community and belonging."
+    ]
+  },
+  {
+    "title": "IRL Hangout/Seminars",
+    "description": "Arrange in-real-life (IRL) hangouts and seminars to facilitate face-to-face interactions among community members. These gatherings will focus on learning, collaboration, and building stronger relationships.",
+    "objectives": [
+      "Promote in-person networking and relationship building.",
+      "Provide hands-on learning experiences.",
+      "Strengthen the community through direct interaction."
+    ]
+  }
+]
 
 export const navbarLinks = [
   {

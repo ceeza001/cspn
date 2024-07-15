@@ -1,44 +1,314 @@
-import { tokenomics } from "@/constants"
 import { motion } from "framer-motion"
 
 const Tokenomics = () => {
   return (
     <div className="w-full p-[1rem] md:px-[4rem] pointer-events-none">
-      <div className="w-full md:w-2/5">
-        <motion.h1 
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0}}
-          transition={{ delay: 0, duration: 1.2, ease: "easeInOut"}}
-          viewport={{ once: true }}
-          className="font-bold text-[50px]">
-          Tokenomics
-        </motion.h1>
-        <motion.h2 
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0, duration: 1.2, ease: "easeInOut"}}
-          viewport={{ once: true }}
-          className="font-bold text-[25px] gradient-text2">
-          Supply & Distribution
-        </motion.h2>
+      <div className="w-full text-center">
+        <h1 
+          className="font-bold text-[30px] md:text-[50px]">
+          MEET THE FOUNDERS
+        </h1>
+        <h2 
+          className="font-bold text-[15px] md:text-[25px] gradient-text2">
+          Giga chads
+        </h2>
         
       </div>
-      <div className="mt-8 flex gap-4 flex-wrap md:flex-nowrap justify-between items-center">
-        {tokenomics.map((item, i) => (
-          <motion.div 
+      <div className="mt-8 flex gap-4 flex-wrap justify-between items-center">
+        {items.map((item, i) => (
+          <div 
             key={i} 
-            initial={{ opacity: 0, x: -100, y: -100 }}
-            whileInView={{ opacity: 1, x: 0, y: 0}}
-            transition={{ delay: i * 0.3, duration: 1.5, ease: "easeInOut"}}
-            viewport={{ once: true }}
-            className="text-center w-full bg-dark-2 border border-[#1F1F22] rounded-lg p-4">
-            <h2 className="text-[20px] font-bold gradient-text">{item.title}</h2>
-            <p>{item.content}</p>
-          </motion.div>
+            className="w-full md:max-w-[18rem] bg-dark-2 border border-[#1F1F22] rounded-lg p-2">
+            {item.header}
+            <div className="mt-8">
+              <h2 className="text-[20px] font-bold gradient-text">{item.title}</h2>
+              <p className="text-[12px] font-semibold">{item.content}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
 };
+
+const SkeletonOne = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full rounded-lg">
+        <img
+          src="/assets/images/venom_bg.jpg"
+        />
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/venom.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+const SkeletonTwo = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full rounded-lg">
+        <img
+          src="/assets/images/reiko_bg.jpg"
+        />
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/reiko.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+const SkeletonThree = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full rounded-lg">
+        <img
+          src="/assets/images/icebam_bg.jpg"
+        />
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/icebam.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+const SkeletonFour = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      style={{
+        background:
+          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+        backgroundSize: "400% 400%",
+      }}
+      className="relative flex flex-1 w-full h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full flex flex-col items-center justify-center rounded-lg">
+        <p>TR¥B£</p>
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/archie.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+const SkeletonFive = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full rounded-lg">
+        <img
+          src="/assets/images/eniola_bg.jpg"
+        />
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/eniola.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+const SkeletonSix = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full rounded-lg">
+        <img
+          src="/assets/images/bob_bg.jpg"
+        />
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/bob.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+const SkeletonSeven = () => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+  return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={variants}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+      }}
+      className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-lg flex-col space-y-2"
+    >
+      <motion.div className="overflow-hidden h-full w-full rounded-lg">
+        <img
+          src="/assets/images/ceeza_bg.jpg"
+        />
+      </motion.div>
+      <div className="absolute bottom-[-1rem] left-2 rounded-lg overflow-hidden h-[3.5rem] w-[3.5rem] border-2 border-dark-2">
+        <img
+          src="/assets/images/ceeza.jpg"
+        />
+      </div>
+    </motion.div>
+  );
+};
+
+const items = [
+  {
+    header: <SkeletonOne />,
+    title: "Venom",
+    content: "Web3 Content writer and storyteller || DeFi analyst || Orange",
+  },
+  {
+    header: <SkeletonTwo />,
+    title: "Reiko",
+    content: "Web3 Marketer || Co-Founder @heychads & @tadaverse ||$TON MAXI || NFT Collector || DM for Collab Amb @LogX_trade @LolliOnTon @TONGlitch @Ton_Baks",
+  },
+  {
+    header: <SkeletonThree />,
+    title: "Icebam",
+    content: "NFTS DEFI WEB 3",
+  },
+  {
+    header: <SkeletonFour />,
+    title: "Archie Billion$",
+    content: "Building with @movementlabsxyz and @SuperteamNG ||Buildoor Medic Imago Dei",
+  },
+  {
+    header: <SkeletonFive />,
+    title: "Eniola♠️",
+    content: "DeFi Content Specialist | Transforming ideas into actionable content that drives organic growth and engagement Break down & Build up",
+  },
+  {
+    header: <SkeletonSix />,
+    title: "DeFi Bob",
+    content: "Web 3 | DeFi | Writer.",
+  },
+  {
+    header: <SkeletonSeven />,
+    title: "Ceeza",
+    content: "Web3 dev crafting cool stuff on the blockchain Poet coding ninja | Making digital magic happen! #Web3Dev #poet",
+  },
+];
 
 export default Tokenomics;

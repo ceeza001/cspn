@@ -2,74 +2,46 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/moving-border";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Vortex } from "@/components/ui/vortex";
 
 const Hero = () => {
   return (
-    <AuroraBackground>
-      <div className="overflow-hidden h-full w-full pt-[4rem] absolute z-50 flex flex-wrap-reverse md:flex-nowrap justify-around items-center gap-4 md:gap-8 p-[1rem] md:px-[6rem]">
-        <motion.div 
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut"}}
-          viewport={{ once: true }}
-          className="w-full space-y-8 md:space-y-10"
-        >
-          <h1 
-            className="font-bold text-[30px] md:text-[40px] leading-[101%] text-[#B24EFF] drop-shadow-2xl">
-              Will you be part of the movement?
-          </h1>
-          <p>
-            Let's shake up the crypto world with ButTon: Celebrating Confidence, Diversity, and Big Ideas!
-          </p>
-
-          <div className="z-[900] flex items-center gap-2">
-            <Button
-              borderRadius="15px"
-              className="pointer-event-none bg-transparent text-white border-primary-500/50 p-4 font-bold"
-            >
-              <Link to="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NjgyMjU3MjA3MCwidG9rZW5fYWRkcmVzcyI6IkVRQjc0eGluYVJ0NHB5YmszaTJtSWdOV2x6R3BzQlNYZVFIeGpoNmt3VFh5RVZLbyJ9" 
-                className=""
-              >
-              Coming Soon
-              </Link>
-            </Button>
-            
-            <Link to="https://t.me/BUTTonTON1">
-              <img 
-                src="/assets/icons/telegram.svg"
-                alt="telegram"
-                width={50}
-                height={50}
-              />
-            </Link>
-            
-            <Link to="https://x.com/Butt_on_TON?t=ZcQ-QoKtFgTzWJm6r2h9LQ&s=09" className="relative">
-              <span className="bg-white top-2 left-2 absolute z-[-1] h-[2rem] w-[2rem]" />
-              <img 
-                src="/assets/icons/x.svg"
-                alt="X-twitter"
-                width={50}
-                height={50}
-              />
-            </Link>
-          </div>
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut"}}
-          viewport={{ once: true }}
-          className="w-full flex items-center justify-center">
-          <img 
-            src="/assets/hero.png" 
-            alt="Button_On_Ton" 
-            className="w-[15rem] md:w-full aspect-square"
-          />
-        </motion.div>
+    <Vortex
+      backgroundColor="black"
+      rangeY={800}
+      particleCount={500}
+      baseHue={120}
+      className="flex items-center flex-col justify-center p-[1rem] md:p-[4rem] w-screen h-screen"
+    >
+      <div className="drop-shadow-2xl font-bold text-[40px] leading-[101%] text-center">
+        <h1 className="mb-4 text-primary">
+          TR¥B£
+        </h1>
+        <h1 className="text-white text-[20px]">
+          You've found your trybe, where collective strength fuels individual greatness.
+        </h1>
       </div>
-    </AuroraBackground>
+
+      <div className="mt-[4rem] flex flex-col md:flex-row items-center gap-2">
+        <Link to="/" className="rounded-full p-2 px-8 text-white bg-primary flex gap-2 items-center">
+          <img 
+            src="/assets/icons/telegram.svg"
+            alt="telegram"
+            className="w-[2rem] h-[2rem] invert-white"
+          />
+          <>Go To Telegram</>
+        </Link>
+
+        <Link to="/" className="rounded-full p-2 px-8 text-white bg-[#1DAA61] flex gap-2 items-center">
+          <img 
+            src="/assets/icons/whatsapp.svg"
+            alt="telegram"
+            className="w-[2rem] h-[2rem] invert-white"
+          />
+          <>Go To Whatsapp</>
+        </Link>
+      </div>
+    </Vortex>
   );
 };
 
