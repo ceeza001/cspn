@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       <div className="mt-[4rem] flex flex-col md:flex-row items-center gap-2">
-        <Link to="/" className="rounded-full p-2 px-8 text-white bg-primary flex gap-2 items-center">
+        <Link to="https://t.me/+sqFgLAS6cX9lMDBk" className="rounded-full p-2 px-8 text-white bg-primary flex gap-2 items-center">
           <img 
             src="/assets/icons/telegram.svg"
             alt="telegram"
@@ -30,14 +30,6 @@ const Hero = () => {
           <>Go To Telegram</>
         </Link>
 
-        <Link to="/" className="rounded-full p-2 px-8 text-white bg-[#1DAA61] flex gap-2 items-center">
-          <img 
-            src="/assets/icons/whatsapp.svg"
-            alt="telegram"
-            className="w-[2rem] h-[2rem] invert-white"
-          />
-          <>Go To Whatsapp</>
-        </Link>
       </div>
     </Vortex>
   );
