@@ -2,11 +2,7 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 
-export const ContainerScroll = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const ContainerScroll = () => {
   const containerRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -43,9 +39,7 @@ export const ContainerScroll = ({
           perspective: "1000px",
         }}
       >
-        <Card rotate={rotate} translate={translate} scale={scale}>
-          {children}
-        </Card>
+        <Card rotate={rotate} translate={translate} scale={scale} />
       </div>
 
       <div className="flex flex-col items-start space-y-4">

@@ -1,13 +1,16 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { navbarLinks } from "@/constants"; // Ensure navbarLinks is properly imported
 
-const useOutsideClick = (ref, callback) => {
+const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement>,
+  callback: (event: MouseEvent | TouchEvent) => void
+) => {
   useEffect(() => {
-    const listener = (event) => {
-      // Do nothing if clicking ref's element or descendent elements
-      if (!ref.current || ref.current.contains(event.target)) {
+    const listener = (event: MouseEvent | TouchEvent) => {
+      // Do nothing if clicking ref's element or descendant elements
+      if (!ref.current || ref.current.contains(event.target as Node)) {
         return;
       }
       callback(event);
@@ -23,9 +26,9 @@ const useOutsideClick = (ref, callback) => {
   }, [ref, callback]);
 };
 
-const Topbar = () => {
+const Topbar: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useOutsideClick(menuRef, () => setOpen(false));
 
@@ -57,7 +60,7 @@ const Topbar = () => {
             key={i}
             to={link.route}
             className={({ isActive }) =>
-              (isActive ? "text-primary font-bold nav_links" : "text-white nav_links")
+              isActive ? "text-primary font-bold nav_links" : "text-white nav_links"
             }
             onClick={() => setOpen(false)} // Close the menu on link click
           >
