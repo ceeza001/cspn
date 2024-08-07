@@ -92,6 +92,7 @@ const Topbar: React.FC = () => {
         </button>
 
         <motion.div
+          initial={{ x: -100, opacity: 0}}
           animate={{ opacity: !open ? 0 : 1, x: !open ? 100 : 0 }}
           className="absolute top-[2.5rem] -right-2 bg-dark-2 w-[15rem] p-4 linear duration-200 rounded-lg shadow-dark-4 shadow-md"
         >
