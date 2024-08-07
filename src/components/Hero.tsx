@@ -1,38 +1,49 @@
-import { Link } from "react-router-dom"
+import React from "react";
 
-import { Vortex } from "@/components/ui/vortex";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const Hero = () => {
   return (
-    <Vortex
-      backgroundColor="black"
-      rangeY={800}
-      particleCount={500}
-      baseHue={120}
-      className="flex items-center flex-col justify-center p-[1rem] md:p-[4rem] w-screen h-screen"
-    >
-      <div className="drop-shadow-2xl font-bold text-[40px] leading-[101%] text-center">
-        <h1 className="mb-4 text-primary">
-          TR¥B£
-        </h1>
-        <h1 className="text-white text-[20px]">
-          You've found your trybe, where collective strength fuels individual greatness.
-        </h1>
-      </div>
+    <BackgroundGradientAnimation>
+      <div className="absolute top-0 h-full p-[1rem] md:p-[6rem] pt-[6rem] z-50 inset-0 flex flex-wrap-reverse md:flex-nowrap items-end md:items-center md:gap-10 md:justify-between pointer-events-none">
+        <div className="w-full flex flex-col gap-4">
+          <span className="w-fit font-thin text-[13px] rounded-lg p-[0.5rem] black-glassmorphism text-primary">
+            CSPN TAP GAME V1.0
+          </span>
 
-      <div className="mt-[4rem] flex flex-col md:flex-row items-center gap-2">
-        <Link to="https://t.me/+sqFgLAS6cX9lMDBk" className="cursor-pointer rounded-full p-2 px-8 text-white bg-primary flex gap-2 items-center">
-          <img 
-            src="/assets/icons/telegram.svg"
-            alt="telegram"
-            className="w-[2rem] h-[2rem] invert-white"
-          />
-          <>Go To Telegram</>
-        </Link>
+          <div>
+            <div className="leading-[220%]">
+              <h1 className="text-[30px] font-bold gradient-text">
+                Points That Pay: 
+              </h1>
+              <h2 className="text-[36px] font-bold text-white">
+                The Crypto Way
+              </h2>
+            </div>
 
+            <div className="mt-4 max-w-md rounded-lg glassmorphism p-[0.5rem]">
+              Click, collect, and cash in! Accumulate points with ease and use them to tap into the potential of crypto markets.
+            </div>
+          </div>
+
+          <div>
+            <button className="gradient rounded-full font-bold text-white text-[20px] flex gap-2 items-center p-2 px-4">
+              <img 
+                src="/assets/icons/gamepad.webp"
+                alt="gamepad"
+                width={25}
+                height={25}
+              />
+              <p>Play Now</p>
+            </button>
+          </div>
+        </div>
+        
+        <div className="w-full h-[12rem] black-glassmorphism">
+        </div>
       </div>
-    </Vortex>
+    </BackgroundGradientAnimation>
   );
-};
+}
 
 export default Hero;

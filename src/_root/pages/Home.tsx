@@ -1,23 +1,30 @@
-import { Hero, Roadmap, Anticipate, Tokenomics } from "@/components/";
+import { Hero, Features, Items, Boost, Faq } from "@/components/";
 
 const Home = () => {
 
   return (
     <div className="">
-      <div className="h-screen">
+      <div className="relative h-[700px]">
         <Hero />
+
+        <div className="z-[100] absolute -bottom-4 left-0 w-full h-[5rem] bg-gradient-to-b from-transparent to-black"></div>
       </div>
 
-      <div className="my-10 md:my-0 max-w-[70rem] mx-auto">
-        <Anticipate />
+      <div className="mt-[4rem]">
+        <Features />
       </div>
 
-      <div className="my-[4rem] max-w-[70rem] mx-auto">
-        <Roadmap />
+      <div className="mt-[4rem]">
+        <Items />
       </div>
 
-      <div className="my-[4rem] text-white max-w-[70rem] mx-auto">
-        <Tokenomics />
+      <div className="">
+        <Boost />
+
+      </div>
+
+      <div className="mt-[4rem]">
+        <Faq />
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary': '#017BFF',
+        'primary': '#AE37BF',
         'secondary-500': '#FFB620',
         'off-white': '#D0DFFF',
         'text-color': '#FAEBD7',
@@ -101,6 +101,11 @@ module.exports = {
             transform: "translateY(-50%)",
           },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -111,6 +116,7 @@ module.exports = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
