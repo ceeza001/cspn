@@ -1,7 +1,3 @@
-import React from "react";
-
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-
 const Features = () => {
   return (
     <div className="p-[1rem] md:p-[6rem]">

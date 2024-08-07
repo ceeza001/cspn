@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const Hero = () => {

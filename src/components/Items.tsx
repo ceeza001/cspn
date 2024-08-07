@@ -20,7 +20,7 @@ const Items = () => {
       
       {items.map((item) => (
         <BackgroundGradient
-          key={item.title}
+          key={item.name}
           className="rounded-[22px] flex-1 w-full md:max-w-[15rem] md:h-[20rem] p-4 bg-zinc-900">
             <IconAppWindow/>
 

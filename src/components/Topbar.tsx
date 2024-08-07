@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { navbarLinks } from "@/constants"; // Ensure navbarLinks is properly imported
