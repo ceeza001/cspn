@@ -48,27 +48,23 @@ export const items = [
 
 export const navbarLinks = [
   {
-    route: "/",
+    route: "/#home",
     label: "Home",
   },
   {
-    route: "/ecosystem",
-    label: "Ecosystem",
+    route: "/#features",
+    label: "Features",
   },
   {
-    route: "/social",
-    label: "Social",
+    route: "/#items",
+    label: "Items",
   },
   {
-    route: "/whitepaper",
+    route: "https://cspn.io/whitepaper/",
     label: "Whitepaper",
   },
   {
-    route: "/staking",
-    label: "Staking",
-  },
-  {
-    route: "/team",
-    label: "Our Team",
+    route: "/#faq",
+    label: "FAQ",
   },
 ];

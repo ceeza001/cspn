@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { navbarLinks } from "@/constants"; // Ensure navbarLinks is properly imported
 
 const useOutsideClick = (
@@ -29,6 +29,7 @@ const useOutsideClick = (
 const Topbar: React.FC = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const { hash } = useLocation();
 
   useOutsideClick(menuRef, () => setOpen(false));
 
@@ -51,7 +52,7 @@ const Topbar: React.FC = () => {
   return (
     <div className="topbar z-[5000] relative black-glassmorphism p-4 flex justify-between items-center">
       <div>
-        <h2 className="text-white font-bold text-[20px]">CSPN</h2>
+        <h2 className="text-white font-bold text-[20px]">Market Clash</h2>
       </div>
 
       <div className="hidden md:flex gap-2">
@@ -59,8 +60,10 @@ const Topbar: React.FC = () => {
           <NavLink
             key={i}
             to={link.route}
-            className={({ isActive }) =>
-              isActive ? "text-primary font-bold nav_links" : "text-white nav_links"
+            className={
+              hash === link.route.replace("/", "")
+                ? "text-primary font-bold nav_links"
+                : "text-white nav_links"
             }
             onClick={() => setOpen(false)} // Close the menu on link click
           >
@@ -92,9 +95,9 @@ const Topbar: React.FC = () => {
         </button>
 
         <motion.div
-          initial={{ x: -100, opacity: 0}}
-          animate={{ opacity: !open ? 0 : 1, x: !open ? 100 : 0 }}
-          className="absolute top-[2.5rem] -right-2 bg-dark-2 w-[15rem] p-4 linear duration-200 rounded-lg shadow-dark-4 shadow-md"
+          initial={{ x: 200, opacity: 0}}
+          animate={{ opacity: !open ? 1 : 1, x: !open ? 200 : 0 }}
+          className="absolute top-[2.5rem] -right-2 bg-dark-2 w-[10rem] p-4 linear duration-200 rounded-lg shadow-dark-4 shadow-md"
         >
           {navbarLinks.map((link, i) => (
             <Link

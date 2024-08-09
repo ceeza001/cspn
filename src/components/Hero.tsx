@@ -12,7 +12,7 @@ const Hero = () => {
           <div>
             <div className="leading-[220%]">
               <h1 className="text-[30px] font-bold gradient-text">
-                Points That Pay: 
+                Points That Pay 
               </h1>
               <h2 className="text-[36px] font-bold text-white">
                 The Crypto Way
@@ -37,7 +37,15 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="w-full h-[12rem] black-glassmorphism">
+        <div className="mx-auto w-full overflow-hidden rounded-lg h-[16rem] md:w-[50rem] md:h-[30rem]">
+          <img
+            src="/assets/images/hero1.jpg"
+            className="w-full md:hidden object-cover -mt-4"
+          />
+          <img
+            src="/assets/images/hero2.jpg"
+            className="w-full hidden md:block object-cover -mt-4"
+          />
         </div>
       </div>
     </BackgroundGradientAnimation>

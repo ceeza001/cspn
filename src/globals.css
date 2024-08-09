@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply max-h-screen w-screen overflow-x-hidden bg-dark-1 text-[#BBC1CD] font-inter;
+    @apply max-h-screen w-screen overflow-x-hidden bg-dark-1 text-sm text-neutral-400 font-inter;
   }
 }
 
