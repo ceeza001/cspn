@@ -17,7 +17,7 @@ const Home = () => {
   
   return (
     <div id="home" className="">
-      <div className="relative h-[700px]">
+      <div className="relative min-h-[100dvh] h-[105vh] ">
         <Hero />
 
         <div className="z-[1] absolute -bottom-4 left-0 w-full h-[5rem] bg-gradient-to-b from-transparent to-black"></div>

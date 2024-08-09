@@ -1,115 +1,44 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { navbarLinks } from "@/constants"; // Ensure navbarLinks is properly imported
-
-const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
-  callback: (event: MouseEvent | TouchEvent) => void
-) => {
-  useEffect(() => {
-    const listener = (event: MouseEvent | TouchEvent) => {
-      // Do nothing if clicking ref's element or descendant elements
-      if (!ref.current || ref.current.contains(event.target as Node)) {
-        return;
-      }
-      callback(event);
-    };
-
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
-
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
-  }, [ref, callback]);
-};
+import { Link } from "react-router-dom";
 
 const Topbar: React.FC = () => {
-  const [open, setOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const { hash } = useLocation();
-
-  useOutsideClick(menuRef, () => setOpen(false));
-
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto"; // Restore scrolling
-    };
-  }, [open]);
-
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
+  
   return (
-    <div className="topbar z-[5000] relative black-glassmorphism p-4 flex justify-between items-center">
-      <div>
-        <h2 className="text-white font-bold text-[20px]">Market Clash</h2>
+    <div className="topbar z-[5000] h-fit relative p-4 flex justify-between items-center">
+      <div className="w-full h-[4rem] md:h-[5rem] absolute top-0 left-0 right-0 text-center">
+        <div className="bg-dark-2 w-fit mx-auto border-2 flex-center border-t-0 border-dark-4 h-full p-2 md:p-4 rounded-b-[25px]">
+          <h1 className="font-black text-[1.8rem] md:text-[2.2rem] text-white">MARKET CLASH</h1>
+        </div>
       </div>
+      
+      <div className="mt-[3.5rem] md:mt-0 w-full flex-between">
+        <div className="rounded-full flex-center gap-2 text-white font-semibold md:text-[24px] p-2 black-glassmorphism border-2 border-dark-4">
+          <Link to="/" className="cursor-pointer rounded-full p-2 bg-dark-2">
+            <img 
+              src="/assets/icons/x.svg"
+              alt="x"
+              className="invert-white w-4 h-4 md:w-6 md:h-6"
+            />
+          </Link>
+          <Link to="/" className="cursor-pointer rounded-full p-2 bg-dark-2">
+            <img 
+              src="/assets/icons/telegram.svg"
+              alt="telegram"
+              className="invert-white w-4 h-4 md:w-6 md:h-6"
+            />
+          </Link>
+          <p>Join us!</p>
+        </div>
 
-      <div className="hidden md:flex gap-2">
-        {navbarLinks.map((link, i) => (
-          <NavLink
-            key={i}
-            to={link.route}
-            className={
-              hash === link.route.replace("/", "")
-                ? "text-primary font-bold nav_links"
-                : "text-white nav_links"
-            }
-            onClick={() => setOpen(false)} // Close the menu on link click
-          >
-            {link.label}
-          </NavLink>
-        ))}
-      </div>
-
-      <div ref={menuRef} className="md:hidden relative">
-        <button
-          onClick={toggleMenu}
-          className="z-[200] flex flex-col justify-between space-y-2 w-[1.5rem] aspect-square"
-        >
-          <motion.div
-            className="bg-white w-[50%] h-[2px]"
-            animate={{ y: open ? 6 : 0, x: open ? 2.5 : 0, rotate: open ? 45 : 0, opacity: open ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
-          ></motion.div>
-          <motion.div
-            className="bg-white flex w-full h-[2px]"
-            animate={{ rotate: open ? -45 : 0 }}
-            transition={{ duration: 0.3 }}
-          ></motion.div>
-          <motion.div
-            className="bg-white w-[40%] h-[2px]"
-            animate={{ width: open ? '1.5rem' : '0.9rem', y: open ? -11 : 0, x: open ? 1 : 0, rotate: open ? 45 : 0 }}
-            transition={{ duration: 0.3 }}
-          ></motion.div>
-        </button>
-
-        <motion.div
-          initial={{ x: 200, opacity: 0}}
-          animate={{ opacity: !open ? 1 : 1, x: !open ? 200 : 0 }}
-          className="absolute top-[2.5rem] -right-2 bg-dark-2 w-[10rem] p-4 linear duration-200 rounded-lg shadow-dark-4 shadow-md"
-        >
-          {navbarLinks.map((link, i) => (
-            <Link
-              key={i}
-              to={link.route}
-              className="block text-white py-2 hover:bg-primary-500 rounded"
-              onClick={() => setOpen(false)} // Close the menu on link click
-            >
-              {link.label}
-            </Link>
-          ))}
-        </motion.div>
+        <Link to="https://cspn.io/whitepaper/" className="cursor-pointer rounded-full flex gap-2 items-center p-2 black-glassmorphism text-white font-semibold md:text-[24px] border-2 border-dark-4">
+          Whitepaper
+          <div className="rounded-full p-[4px] border-[1.5px]">
+            <img 
+              src="/assets/icons/link.svg"
+              alt="whitepaper"
+              className="invert-white w-4 h-4 md:w-6 md:h-6"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

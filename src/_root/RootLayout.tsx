@@ -1,13 +1,10 @@
 import { Outlet } from "react-router-dom";
 
-import { Topbar } from "@/components/";
-
 const RootLayout = () => {
   
   return (
     <>
       <div className="w-full">
-        <Topbar />
         <Outlet />
         
         <footer className="relative bg-dark-4 mt-[4rem] pt-[4rem] flex flex-col items-center text-center p-[1rem] md:p-[4rem]">

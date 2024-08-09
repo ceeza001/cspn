@@ -96,7 +96,7 @@
 
   /* Topbar */
   .topbar {
-    @apply fixed top-0 z-[99] w-full w-full flex p-[1rem] justify-between items-center;
+    @apply w-full flex p-[1rem] justify-between items-center;
   }
 
   .nav_links {
