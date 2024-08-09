@@ -80,7 +80,7 @@ export const Card = ({
       <img
         src={`/assets/images/Boost.png`}
         alt="hero"
-        className="mx-auto h-full"
+        className="mx-auto h-[30rem] md:h-full"
         draggable={false}
       />
       <div className="absolute z-[-1] top-0 -left-[4rem]  blur-2xl rounded-full w-[30rem] h-[30rem] bg-gradient-to-b from-black to-primary" />
