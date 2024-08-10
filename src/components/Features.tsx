@@ -1,16 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import clash from "@/assets/clash.mp4";
 
 const Features = () => {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          videoRef.current.play(); // Play the video when it's in the viewport
+          if (videoRef.current) {
+            videoRef.current.play(); // Play the video when it's in the viewport
+          }
         } else {
-          videoRef.current.pause(); // Pause the video when it's out of the viewport
+          if (videoRef.current) {
+            videoRef.current.pause(); // Pause the video when it's out of the viewport
+          }
         }
       },
       { threshold: 0.5 } // Adjust the threshold to control when the video starts/stops
