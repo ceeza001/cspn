@@ -1,6 +1,32 @@
-import clash from "@/assets/clash.mp4"
+import React, { useEffect, useRef } from "react";
+import clash from "@/assets/clash.mp4";
 
 const Features = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current.play(); // Play the video when it's in the viewport
+        } else {
+          videoRef.current.pause(); // Pause the video when it's out of the viewport
+        }
+      },
+      { threshold: 0.5 } // Adjust the threshold to control when the video starts/stops
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="p-[1rem] md:p-[6rem]">
       <div className="flex flex-wrap md:flex-nowrap items-start gap-10 justify-between">
@@ -15,9 +41,9 @@ const Features = () => {
             Market-Clash CSPN Tap Game is a simple yet addictive tapping experience where you collect points with just a click, redeem them for crypto rewards, invite friends to earn more, and fill up your BAG powers to dominate opponents - introducing the world to crypto earning through a fun and easy-to-play game.
           </p>
         </div>
-        
+
         <div className="w-full md:max-w-[50rem] aspect-square">
-          <video src={clash} autoPlay loop muted className="rounded-lg" />
+          <video ref={videoRef} src={clash} autoPlay loop muted className="rounded-lg" />
         </div>
       </div>
       
@@ -48,7 +74,7 @@ const Features = () => {
               <span className="absolute top-0 left-0 rounded-l-lg h-full w-2 bg-primary"></span>
               <li>Earn points for inviting friends to join the game</li>
               <li>Get 10% of the points your friends earn</li>
-              <li>Receive a 10% commission on their in-game purchas</li>
+              <li>Receive a 10% commission on their in-game purchases</li>
             </ul>
           </div>
         </div>
