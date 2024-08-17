@@ -47,14 +47,18 @@ export const ContainerScroll = () => {
           MORE POSSIBILITIES
         </span>
         <h1 className="text-white text-4xl md:text-[40px] font-bold mt-1 leading-none">
-          Boost Options
+          Boosts
         </h1>
         <p>
-          Supercharge your progress with boost options! Accelerate your point collection and rapidly level up your profile. 
+          Boosts are essential to any trader, allowing Bulls to Charge Forward, Bears to Claw Back and Whales to Eat Them All.
         </p>
 
         <p>
-          CSPN Tap Game V1.0 - the ultimate tapping experience.
+          Everything from Multiple Taps per Tap, to increasing the FOMO limit, every Boost has a purpose.
+        </p>
+        
+        <p className="font-bold text-white/80">
+          Stragetically manage which order to get Boosts to maximize your gains.
         </p>
       </div>
     </div>
@@ -83,7 +87,7 @@ export const Card = ({
         className="mx-auto h-[30rem] md:h-full"
         draggable={false}
       />
-      <div className="absolute z-[-1] top-0 -left-[4rem]  blur-2xl rounded-full w-[30rem] h-[30rem] bg-gradient-to-b from-black to-primary" />
+      <div className="absolute z-[-1] top-0 -left-[4rem]  blur-2xl rounded-full w-[30rem] h-[30rem] bg-gradient-to-b from-[#0B1630] to-primary" />
     </motion.div>
   );
 };

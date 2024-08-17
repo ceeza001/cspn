@@ -2,7 +2,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 const Faq = () => {
   return (
-    <div className="md:p-[4rem]">
+    <div className="py-[1rem] md:p-[4rem]">
       <div className="p-[1rem] mb-4 flex flex-col items-start space-y-4">
         <span className="w-fit font-thin text-[13px] rounded-lg p-[0.5rem] glassmorphism text-primary">
           FAQ

@@ -7,8 +7,7 @@ const RootLayout = () => {
       <div className="w-full">
         <Outlet />
         
-        <footer className="relative bg-dark-4 mt-[4rem] pt-[4rem] flex flex-col items-center text-center p-[1rem] md:p-[4rem]">
-          <div className="absolute -top-2 left-0 w-full h-[5rem] bg-gradient-to-b from-black to-transparent"/>
+        <footer className="relative mt-[4rem] pt-[4rem] flex flex-col items-center text-center p-[1rem] md:p-[4rem] bg-gradient-to-b from-[#0B1630] to-[#000000]">
           <img
             src="/assets/images/logo.png"
             alt="Logo"

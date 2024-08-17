@@ -11,10 +11,10 @@ const Items = () => {
           ITEMS
         </span>
         <h1 className="text-white text-4xl md:text-[40px] font-bold mt-1 leading-none">
-          BAG Options
+          Kit Options
         </h1>
         <p>
-          Redeem your earned points to upgrade your BAG powers and unlock a competitive edge. The more robust your BAG options, the greater your advantage over opponents will be.
+          Your KIT has a number of powerful tools that can be purchased to enhance your potential or provide special privledges like Sending Points to other players, restoring FOMO, Entering into Airdrops or even voting on the next game improvements to be made.
         </p>
       </div>
       

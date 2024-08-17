@@ -13,14 +13,17 @@ const Hero = () => {
           </span>
 
           <div className="text-center mt-10 w-full">
-            <div className="leading-[220%]">
-              <h2 className="text-[36px] md:text-[46px] font-black text-white">
-                Points That Pay The Crypto Way
+            <div className="leading-[230%]">
+              <h1 className="text-[36px] md:text-[46px] font-black text-white">
+                MarketClash
+              </h1>
+              <h2 className="text-[25px] mt-2 md:text-[46px] font-medium text-white">
+                Bears, Bulls and Whales
               </h2>
             </div>
 
-            <p className="md:mt-4 md:leading-[120%] rounded-lg text-[20px] md:text-[30px] p-[0.5rem] text-white">
-              Click, collect, and cash in: earn points easily and redeem them for crypto assets like CSPN and TON coins, building your digital wealth with every click!
+            <p className="md:mt-4 md:leading-[120%] rounded-lg text-[15px] md:text-[30px] p-[0.5rem] text-white">
+              Bulls charge ahead, Bears swipe down, and Whales feast in every market move. Tap to earn points, power up with boosts and upgrades, and rally your friends for the fiercest battle on the trading floor.
             </p>
           </div>
           

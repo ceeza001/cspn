@@ -42,7 +42,10 @@ const Features = () => {
             What's Market-Clash?
           </h1>
           <p>
-            Market-Clash CSPN Tap Game is a simple yet addictive tapping experience where you collect points with just a click, redeem them for crypto rewards, invite friends to earn more, and fill up your BAG powers to dominate opponents - introducing the world to crypto earning through a fun and easy-to-play game.
+            MarketClash is a simple yet addictive tapping experience where you collect points with just a tap, invite friends to earn even more, and purchase tools from your KIT to increase those gains.
+            <br />
+            <br />
+            <span className="text-white/90 font-bold">Feel the thrill of market battles through a fun and easy-to-play game.</span>
           </p>
         </div>
 
@@ -52,7 +55,7 @@ const Features = () => {
       </div>
       
       <div className="mt-[4rem] flex flex-wrap justify-between items-center gap-4">
-        <div className="w-full flex flex-col md:flex-row gap-4 p-4 md:flex-1 rounded-lg bg-dark-2 md:bg-transparent border-2 md:border-0 border-dark-4">
+        <div className="w-full flex flex-col md:flex-row gap-4 p-4 md:flex-1 rounded-lg black-glassmorphism md:bg-transparent border-2 md:border-0 border-dark-4">
           <div className="w-full">
             <div className="mx-auto relative mt-2 w-full md:max-w-[15rem]">
               <img 
@@ -68,17 +71,17 @@ const Features = () => {
 
           <div className="mt-8">
             <h1 className="mb-2 text-xl text-white font-bold ">
-              The Game That Puts Your Points to Work
+              Points become Gains with every Tap
             </h1>
             <p>
-              Turn your in-game points into CSPN and TON coins, or gift them to friends - the power is in your hands!
+              Spend points on Boosts, purchase tools from your KIT, Send Points to your friends and join into exclusive AirDrops
             </p>
 
             <ul className="inset relative mt-4 bg-dark-4 p-2 pl-4 rounded-lg">
               <span className="absolute top-0 left-0 rounded-l-lg h-full w-2 bg-primary"></span>
               <li>Earn points for inviting friends to join the game</li>
-              <li>Get 10% of the points your friends earn</li>
-              <li>Receive a 10% commission on their in-game purchases</li>
+              <li>Get 15% of the points your friends earn</li>
+              <li>Receive a 15% commission on their in-game purchases</li>
             </ul>
           </div>
         </div>
