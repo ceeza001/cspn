@@ -18,7 +18,7 @@ const Hero = () => {
                 MarketClash
               </h1>
               <h2 className="text-[25px] mt-2 md:text-[46px] font-medium text-white">
-                Bears, Bulls and Whales
+                Rise as the Ultimate Crypto Mogul in Market Clash.
               </h2>
             </div>
 
