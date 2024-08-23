@@ -16,7 +16,7 @@ const Topbar: React.FC = () => {
       </div>
       
       <div className="mt-[3.5rem] md:mt-0 w-full flex-between">
-        <div className="rounded-full flex-center gap-2 text-white font-semibold md:text-[24px] p-2 bg-white/80 text-dark-1 border-2 border-dark-4">
+        <div className="rounded-full flex-center gap-2 text-black font-semibold md:text-[24px] p-2 bg-white/80 border-2 border-dark-4">
           <Link to="/" className="cursor-pointer rounded-full p-2 bg-dark-2">
             <img 
               src="/assets/icons/x.svg"
