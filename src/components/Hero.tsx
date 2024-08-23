@@ -4,20 +4,16 @@ import { Topbar } from "@/components/";
 const Hero = () => {
   return (
     <BackgroundGradientAnimation>
-      <div className="absolute top-0 h-full z-50 inset-0 pointer-events-none">
+      <div className="absolute top-0 h-full z-50 inset-0 select-none">
         <Topbar />
         
         <div className="p-[1rem] h-full max-h-[80vh] md:p-[6rem] flex flex-col flex-center gap-4">
-          <span className="w-fit font-thin text-[13px] md:text-[23px] rounded-lg p-[0.5rem] black-glassmorphism text-primary">
-            CSPN TAP GAME V1.0
-          </span>
-
           <div className="text-center mt-10 w-full">
-            <div className="leading-[230%]">
+            <div className="space-y-4 md:space-y-8">
               <h1 className="text-[36px] md:text-[46px] font-black text-white">
                 MarketClash
               </h1>
-              <h2 className="text-[25px] mt-2 md:text-[46px] font-medium text-white">
+              <h2 className="text-[25px] mt-2 leading-[120%] md:text-[46px] font-medium text-white">
                 Rise as the Ultimate Crypto Mogul in Market Clash.
               </h2>
             </div>

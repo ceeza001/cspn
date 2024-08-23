@@ -11,10 +11,10 @@ const RootLayout = () => {
           <img
             src="/assets/images/logo.png"
             alt="Logo"
-            className="w-[7rem] h-[5rem] md:w-[8rem] md:h-[8rem]"
+            className="h-[4rem] md:w-[8rem] md:h-[8rem]"
           />
           <p>
-            © 2023 Crypto Sports Network. All Rights Reserved.
+            © 2023 Market Clash. All Rights Reserved.
           </p>
         </footer>
       </div>
