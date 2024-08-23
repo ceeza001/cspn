@@ -11,7 +11,7 @@ const RootLayout = () => {
           <img
             src="/assets/images/logo.png"
             alt="Logo"
-            className="h-[4rem] md:w-[8rem] md:h-[8rem]"
+            className="h-[4rem] md:w-[8rem] md:h-[8rem] font-thin"
           />
           <p>
             © 2023 Market Clash. All Rights Reserved.

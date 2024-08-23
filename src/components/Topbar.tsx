@@ -5,7 +5,7 @@ const Topbar: React.FC = () => {
   return (
     <div className="topbar z-[5000] h-fit relative p-4 flex justify-between items-center">
       <div className="w-full h-[4rem] md:h-[5rem] absolute top-0 left-0 right-0 text-center">
-        <div className="bg-dark-2 w-fit mx-auto border-2 flex-center flex-col gap-2 border-t-0 border-dark-4 h-full p-4 md:p-4 rounded-b-[25px]">
+        <div className="bg-dark-2 w-fit mx-auto border-2 flex-center flex-col border-t-0 border-dark-4 h-full p-4 md:p-4 rounded-b-[25px]">
           <img 
             src="/assets/images/logo.png"
             alt="logo"

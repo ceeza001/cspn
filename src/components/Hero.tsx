@@ -10,11 +10,16 @@ const Hero = () => {
         <div className="p-[1rem] h-full max-h-[80vh] md:p-[6rem] flex flex-col flex-center gap-4">
           <div className="text-center mt-10 w-full">
             <div className="space-y-4 md:space-y-8">
-              <h1 className="text-[36px] md:text-[46px] font-black text-white">
-                MarketClash
-              </h1>
-              <h2 className="text-[25px] mt-2 leading-[120%] md:text-[46px] font-medium text-white">
-                Rise as the Ultimate Crypto Mogul in Market Clash.
+              <div className="text-[36px] md:text-[46px] font-black text-white">
+                <img 
+                  src="/assets/images/logo.png"
+                  alt="logo"
+                  className="font-[900] h-[1.3rem] md:h-[4rem] w-full"
+                />
+              </div>
+              <h2 className="text-[23px] mt-2 leading-[120%] md:text-[46px] font-medium text-white">
+                Tap Into Your Wild Side:
+Become the Ultimate Crypto Mogul
               </h2>
             </div>
 
